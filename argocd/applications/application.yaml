@@ -11,11 +11,11 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
     namespace: guestbook
   syncPolicy:
     syncOptions:
-      - CreateNamespace=false
+      - CreateNamespace=true
 
 ---
 apiVersion: argoproj.io/v1alpha1
