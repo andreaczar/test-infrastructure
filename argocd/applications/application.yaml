@@ -124,16 +124,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  annotations:
-    notifications.argoproj.io/subscribe.on-sync-status-unknown.slack: testing
-    notifications.argoproj.io/subscribe.on-created.slack: testing
-    notifications.argoproj.io/subscribe.on-deleted.slack: testing
-    notifications.argoproj.io/subscribe.on-deployed.slack: testing
-    notifications.argoproj.io/subscribe.on-health-degraded.slack: testing
-    notifications.argoproj.io/subscribe.on-sync-failed.slack: testing
-    notifications.argoproj.io/subscribe.on-sync-running.slack: testing
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: testing
-    notifications.argoproj.io/subscribe.on-sync-status-unknown.slack: testing
   name: postgres
   namespace: argocd
 spec:
