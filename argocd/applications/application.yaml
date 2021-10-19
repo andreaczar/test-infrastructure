@@ -113,7 +113,7 @@ spec:
   source:
     repoURL: 'https://github.com/andreaczar/test-infrastructure.git'
     path: nginx
-    targetRevision: test
+    targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: andrea
