@@ -23,5 +23,5 @@ spec:
         env:
           - name: POSTGRES_PASSWORD
             value: postgres
-          - name: POSTGRES_USER
+          - name: POSTGRES_USERS
             value: postgres
