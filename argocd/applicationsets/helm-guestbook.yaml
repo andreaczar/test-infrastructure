@@ -6,19 +6,19 @@ spec:
  generators:
  - list:
      elements:
-     - name: test1
-       namespace: test1
+     - name: test1-app
+       namespace: test
        url: https://kubernetes.default.svc
        valuesfile: values-production.yaml
        values.port: NodePort
-       values.replicaCount: 3
-     - name: test2
+       values.replicaCount: '1'
+     - name: test2-app
        namespace: test2
        url: https://kubernetes.default.svc
        valuesfile: values-test.yaml
        values:
          port: LoadBalancer
-         replicaCount: 1
+         replicaCount: '5'
  template:
    metadata:
      name: '{{name}}-guestbook'
