@@ -133,6 +133,11 @@ declare "kubernetes" {
     optional = true
   }
 
+  argument "scrape_timeout" {
+    comment = "How long before a scrape times out (default: 10s)"
+    optional = true
+  }
+
   /*
     Hidden Arguments
     These arguments are used to set reusable variables to avoid repeating logic
