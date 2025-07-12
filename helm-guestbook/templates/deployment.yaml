@@ -29,13 +29,21 @@ spec:
               containerPort: 80
               protocol: TCP
           livenessProbe:
+            failureThreshold: 3
             httpGet:
               path: /
               port: http
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
           readinessProbe:
+            failureThreshold: 3
             httpGet:
               path: /
               port: http
+            periodSeconds: 10
+            successThreshold: 10
+            timeoutSeconds: 1
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
